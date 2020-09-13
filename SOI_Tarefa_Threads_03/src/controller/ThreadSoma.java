@@ -15,10 +15,7 @@ public class ThreadSoma extends Thread{
 	}
 	
 	public void run() {
-		bloqueia_tempo();
-		for (int number : vetor) {
-			System.out.print(number);
-		}
+//		bloqueia_tempo();
 		System.out.println();
 		int soma = somalinha();
 		System.out.println("Soma da linha " + numero_linha + " : "+soma);
@@ -33,14 +30,14 @@ public class ThreadSoma extends Thread{
 		return soma_linha;
 	}
 	
-	private void bloqueia_tempo() {
-		// Bloquear alguma Thread por x ms
-		int tempo = 10;
-		try {
-			sleep(tempo * numero_linha);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+//	private void bloqueia_tempo() {
+//		// Bloquear alguma Thread por x ms
+//		int tempo = 10;
+//		try {
+//			sleep(tempo * numero_linha);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }

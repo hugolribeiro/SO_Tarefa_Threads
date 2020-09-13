@@ -38,16 +38,8 @@ public class Main {
 		}
 		
 		// Chamando cada thread com seu vetor (linha da matriz)
-		int vetor[] = new int[5];
-		for (int linha = 0; linha < 3; linha ++) {
-			for (int coluna = 0; coluna < 5; coluna ++) {
-				vetor[coluna] = matriz[linha][coluna];
-			}
-			for (int item : vetor) {
-				System.out.print(item + " ");
-			}
-			System.out.println();
-			Thread Tcalclinha = new ThreadSoma(vetor, linha);
+		for (int vetor = 0; vetor < 3; vetor ++) {
+			Thread Tcalclinha = new ThreadSoma(matriz[vetor], vetor);
 			Tcalclinha.start();
 		}
 		
